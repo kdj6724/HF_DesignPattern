@@ -9,7 +9,6 @@ std::string Mocha::GetDescription() {
   return beverage_->GetDescription() + " Mocha";
 }
 double Mocha::Cost() {
-  printf("[kdj6724] %s %d\n", __FUNCTION__, __LINE__);
   return 0.20 + beverage_->Cost();
 }
 
