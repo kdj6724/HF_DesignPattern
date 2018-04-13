@@ -3,37 +3,39 @@
 // kdj6724@naver.com
 #include "creator.h"
 Pizza* PizzaStore::OrderPizza(std::string type) {
-  pizza_ = CreatePizza(type);
+  CreatePizza(type);
   pizza_->Prepare();
   pizza_->Bake();
   pizza_->Cut();
   pizza_->Box();
   return pizza_.get();
 }
-std::unique_ptr<Pizza> NYPizzaStore::CreatePizza(std::string type) {
+Pizza* NYPizzaStore::CreatePizza(std::string type) {
   if (type == "cheese") {
-    return std::unique_ptr<Pizza> (new NYStyleCheesePizza());
+    pizza_.reset(new NYStyleCheesePizza());
   } else if (type == "veggie") {
-    return std::unique_ptr<Pizza> (new NYStyleVegiePizza());
+    pizza_.reset(new NYStyleVegiePizza());
   } else if (type == "clam") {
-    return std::unique_ptr<Pizza> (new NYStyleClamPizza());
+    pizza_.reset(new NYStyleClamPizza());
   } else if (type == "pepperoni") {
-    return std::unique_ptr<Pizza> (new NYStylePepperoniPizza());
+    pizza_.reset(new NYStylePepperoniPizza());
   } else {
-    return NULL;
+    return nullptr;
   }
+  return pizza_.get();
 }
-std::unique_ptr<Pizza> ChicagoPizzaStore::CreatePizza(std::string type) {
+Pizza* ChicagoPizzaStore::CreatePizza(std::string type) {
   if (type == "cheese") {
-    return std::unique_ptr<Pizza> (new ChicagoStyleCheesePizza());
+    pizza_.reset(new ChicagoStyleCheesePizza());
   } else if (type == "veggie") {
-    return std::unique_ptr<Pizza> (new ChicagoStyleVegiePizza());
+    pizza_.reset(new ChicagoStyleVegiePizza());
   } else if (type == "clam") {
-    return std::unique_ptr<Pizza> (new ChicagoStyleClamPizza());
+    pizza_.reset(new ChicagoStyleClamPizza());
   } else if (type == "pepperoni") {
-    return std::unique_ptr<Pizza> (new ChicagoStylePepperoniPizza());
+    pizza_.reset(new ChicagoStylePepperoniPizza());
   } else {
-    return NULL;
+    return nullptr;
   }
+  return pizza_.get();
 }
 

@@ -8,15 +8,15 @@
 class PizzaStore {
 public:
   Pizza* OrderPizza(std::string type);
-  virtual std::unique_ptr<Pizza> CreatePizza(std::string type) = 0;
+  virtual Pizza* CreatePizza(std::string type) = 0;
 protected:
   std::unique_ptr<Pizza> pizza_;
 };
 class NYPizzaStore : public PizzaStore {
-  virtual std::unique_ptr<Pizza> CreatePizza(std::string type);
+  Pizza* CreatePizza(std::string type);
 };
 class ChicagoPizzaStore : public PizzaStore {
-  virtual std::unique_ptr<Pizza> CreatePizza(std::string type);
+  Pizza* CreatePizza(std::string type);
 };
 #endif
 
