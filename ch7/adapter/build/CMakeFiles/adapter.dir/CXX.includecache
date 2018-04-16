@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/child_duck.cpp
+child_duck.h
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/child_duck.h
+
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/child_duck.h
+iostream
+-
+duck.h
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/duck.h
+
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/duck.cpp
+iostream
+-
+duck.h
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/duck.h
+
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/duck.h
+memory
+-
+turkey.h
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/turkey.h
+
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/main.cpp
+child_duck.h
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/child_duck.h
+
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/turkey.cpp
+iostream
+-
+turkey.h
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/turkey.h
+
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/src/turkey.h
+

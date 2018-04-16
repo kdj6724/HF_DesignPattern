@@ -1,0 +1,3 @@
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/build/CMakeFiles/rebuild_cache.dir
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/build/CMakeFiles/edit_cache.dir
+/Users/kdj6724/HF_DesignPattern/ch7/adapter/build/CMakeFiles/adapter.dir
