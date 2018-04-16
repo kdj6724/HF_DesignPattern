@@ -8,16 +8,19 @@ public:
   virtual void AddCondiment() = 0;
   virtual void BoilWater();
   virtual void PourInCup();
+  virtual bool CoustomerWants();  // hook
 };
 
 class Coffee : public CaffeineBeverage {
 public:
   virtual void Brew();
   virtual void AddCondiment();
+  virtual bool CoustomerWants();  // hook
 };
 
 class Tea : public CaffeineBeverage {
 public:
   virtual void Brew();
   virtual void AddCondiment();
+  virtual bool CoustomerWants();  // hook
 };

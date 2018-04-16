@@ -7,13 +7,17 @@ void CaffeineBeverage::PrepareRecipe() {
   BoilWater();
   Brew();
   PourInCup();
-  AddCondiment();
+  if (CoustomerWants() == true)
+    AddCondiment();
 }
 void CaffeineBeverage::BoilWater() {
   std::cout << "boil water" << std::endl;
 }
 void CaffeineBeverage::PourInCup() {
   std::cout << "pour in cup" << std::endl;
+}
+bool CaffeineBeverage::CoustomerWants() {
+  return true;
 }
 
 void Coffee::Brew() {
@@ -22,10 +26,16 @@ void Coffee::Brew() {
 void Coffee::AddCondiment() {
   std::cout << "add coffee" << std::endl;
 }
+bool Coffee::CoustomerWants() {
+  return false;
+}
 
 void Tea::Brew() {
   std::cout << "brew tea" << std::endl;
 }
 void Tea::AddCondiment() {
   std::cout << "add tea" << std::endl;
+}
+bool Tea::CoustomerWants() {
+  return true;
 }
